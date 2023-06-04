@@ -3,7 +3,7 @@ body {
 }
 
 .header {
-  height: 145px;
+  height: 144px;
 }
 
 .header_wrap {
@@ -58,6 +58,7 @@ body {
   display: inline-block;
   line-height: 53px;
   width: 100%;
+  font-size: 15px;
 }
 
 .gnb li a::after {
@@ -69,7 +70,7 @@ body {
   transition: 400ms width;
   margin-top: -5px;
   position: absolute;
-  bottom: 0;
+  bottom: 1px;
   left: 0;
   right: 0;
   margin: 0 auto;
@@ -77,4 +78,50 @@ body {
 
 .gnb li a:hover::after {
   width: 100%;
+}
+
+.main_banner {
+  height: 690px;
+  background-color: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 0px 100px 0px;
+  margin-bottom: 100px;
+}
+
+.main_banner h2 {
+  font-size: 28px;
+}
+
+.main_adopting {
+  background-color: #002c23;
+  padding: 80px 0px 100px;
+  text-align: center;
+}
+
+.adopting_title {
+  font-size: 32px;
+  color: #fff;
+  padding-bottom: 50px;
+}
+
+.adopting_title .bold {
+  font-weight: 900;
+  margin-right: 6px;
+}
+
+.adopting_cat .img {
+  position: relative;
+  padding: 0 5px;
+  overflow: hidden;
+}
+
+.adopting_cat .img .img_src {
+  display: block;
+  overflow: hidden;
+  padding-bottom: 66%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }

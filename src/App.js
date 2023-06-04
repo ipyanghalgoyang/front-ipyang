@@ -1,12 +1,13 @@
 import "./css/reset.css";
 import "./css/app.css";
-import MainLayout from "./components/MainLayout";
-import Main from "./components/page/Main";
+import MainLayout from "./components/main/MainLayout";
+import MainContents from "./components/main/MainContents";
 
 function App() {
   return (
     <div className="App">
       <MainLayout />
+      <MainContents />
     </div>
   );
 }
