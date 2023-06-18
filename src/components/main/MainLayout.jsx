@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export default function MainLayout() {
   return (
     <div className="header">
@@ -6,10 +8,10 @@ export default function MainLayout() {
         <div className="util_wrap">
           <ul>
             <li>
-              <a href="/">LOGIN</a>
+              <Link to="/login">LOGIN</Link>
             </li>
             <li>
-              <a href="/">JOIN</a>
+              <Link to="/join">JOIN</Link>
             </li>
           </ul>
         </div>
