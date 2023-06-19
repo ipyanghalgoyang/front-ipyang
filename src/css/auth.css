@@ -1,0 +1,73 @@
+.red {
+  color: red;
+}
+
+.login-wrap {
+  height: 80vh;
+}
+
+.login-wrap .login-title {
+  padding: 48px 0px;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.join-wrap {
+  padding: 95px 0px 100px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.join-wrap .join-title {
+  padding: 48px 0px 96px;
+  font-size: 36px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.join-form {
+  border: 1px solid #d8d8d8;
+  padding: 20px 40px 40px 40px;
+  text-align: center;
+}
+
+.join-form-main-title {
+  font-size: 24px;
+  text-align: center;
+  font-weight: 400;
+  margin: 28px 0px 72px 0px;
+}
+
+.join-form .col-6 {
+  list-style: none;
+  width: 50%;
+  float: left;
+  padding: 0px 15px 0px 15px;
+}
+
+.join-form .col-6 .inputbox {
+  position: relative;
+  text-align: left;
+}
+
+.join-form input {
+  border: 0;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #fff;
+  font-size: 16px;
+  padding: 0;
+  height: 38px;
+  width: 100%;
+}
+
+.join-form label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  line-height: 1.5;
+}
+
+.join-form input:focus {
+  outline: none;
+}
