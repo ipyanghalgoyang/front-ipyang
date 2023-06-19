@@ -1,4 +1,5 @@
 import "../../css/auth.css";
+import { CiMail, CiLock, CiUser, CiHome, CiPhone, CiFileOn } from 'react-icons/ci';
 
 export default function MainBanner() {
   return (
@@ -8,35 +9,34 @@ export default function MainBanner() {
       </div>
       <form action="">
         <div className="join-form">
-          <h2 className="join-form-main-title">
-            <span className="red">*</span> 표시는 필수 입력 항목입니다.
-          </h2>
-          <ul>
-            <li className="col-6">
-              <div className="inputbox">
-                <input type="text" placeholder="이메일" />
-                <label>이메일</label>
-              </div>
-            </li>
-            <li className="col-6">
-              <div className="inputbox">
-                <input type="text" placeholder="이메일" />
-                <label>이메일</label>
-              </div>
-            </li>
-            <li className="col-6">
-              <div className="inputbox">
-                <input type="text" placeholder="이메일" />
-                <label>이메일</label>
-              </div>
-            </li>
-            <li className="col-6">
-              <div className="inputbox">
-                <input type="text" placeholder="이메일" />
-                <label>이메일</label>
-              </div>
-            </li>
-          </ul>
+          <div className="form-item">
+            <div className="form-item-icon"><CiMail /></div>
+            <input type="text" placeholder="이메일" />
+          </div>
+          <div className="form-item">
+            <div className="form-item-icon"><CiLock /></div>
+            <input type="text" placeholder="비밀번호" />
+          </div>
+          <div className="form-item">
+            <div className="form-item-icon"><CiUser /></div>
+            <input type="text" placeholder="닉네임" />
+          </div>
+          <div className="form-item">
+            <div className="form-item-icon"><CiPhone /></div>
+            <input type="text" placeholder="연락처" />
+          </div>
+          <div className="form-item">
+            <div className="form-item-icon"><CiHome /></div>
+            <input type="text" placeholder="주소 입력(선택)" />
+          </div>
+          <div className="form-item">
+            <div className="form-item-icon"><CiHome /></div>
+            <input type="text" placeholder="상세주소(선택)" />
+          </div>
+          <div className="form-item">
+            <div className="form-item-icon"><CiFileOn /></div>
+            <input type="text" placeholder="프로필 사진(선택)" />
+          </div>
         </div>
       </form>
     </div>
