@@ -9,6 +9,7 @@ import {
 } from "react-icons/ci";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import qs from "qs";
 
 export default function MainBanner() {
   const [email, setEmail] = useState("");
@@ -74,14 +75,13 @@ export default function MainBanner() {
       return false;
     }
     let sendData = await axios
-      .post("/v1/sign", { data })
+      .post("/v1/sign", qs.stringify(data))
       .then(function (res) {
         if (res.data.status === 200) {
           alert("회원가입 성공");
-          setDupEmail(true);
+          window.location.href = "/";
         } else {
-          alert("중복된 이메일입니다.");
-          setDupEmail(false);
+          alert("회원가입 실패.");
         }
       })
       .catch(function (err) {
