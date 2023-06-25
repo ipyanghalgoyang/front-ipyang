@@ -4,7 +4,7 @@ import { Route, Routes } from "react-router-dom";
 import MainLayout from "./components/main/MainLayout";
 import MainContents from "./components/main/MainContents";
 import Login from "./components/auth/Login";
-import Join from "./components/auth/Join";
+import JoinMain from "./components/auth/JoinMain";
 
 function App() {
   return (
@@ -14,7 +14,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainContents />}></Route>
         <Route path="/login" element={<Login />}></Route>
-        <Route path="/join" element={<Join />}></Route>
+        <Route path="/join" element={<JoinMain />}></Route>
       </Routes>
     </div>
   );
