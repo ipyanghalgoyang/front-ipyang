@@ -1,11 +1,10 @@
 import "../../css/auth.css";
-import { CiMail, CiLock, } from "react-icons/ci";
+import { CiMail, CiLock } from "react-icons/ci";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import qs from "qs";
 
 export default function MainBanner() {
-
   const [email, setEmail] = useState("");
   const [passwd, setPasswd] = useState("");
 
@@ -24,10 +23,9 @@ export default function MainBanner() {
       .post("/v1/login", qs.stringify(data))
       .then(function (res) {
         if (res.data.status === 200) {
-          alert("로그인 성공");
           window.location.href = "/";
         } else {
-          alert("로그인 실패.");
+          alert("아이디와 비밀번호를 확인해주세요.");
         }
       })
       .catch(function (err) {

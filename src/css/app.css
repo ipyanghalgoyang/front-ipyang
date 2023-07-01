@@ -14,6 +14,12 @@ body {
   line-height: 90px;
 }
 
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
+
 .util_wrap {
   position: absolute;
   top: 0;
@@ -96,7 +102,7 @@ body {
 
 .main_adopting {
   background-color: #002c23;
-  padding: 80px 0px 100px;
+  padding: 80px 0px 70px;
   text-align: center;
 }
 
@@ -124,4 +130,64 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+}
+
+._bar {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #222222;
+}
+
+.title_wrap {
+  padding: 80px 0 80px;
+}
+
+.board_title .tit_1 {
+  position: relative;
+  display: inline-block;
+  font-size: 32px;
+}
+
+.board_title .tit_1::before {
+  position: absolute;
+  content: "";
+  border-bottom: 1px solid #222;
+  width: 1200px;
+  top: 50%;
+  left: calc(100% + 30px);
+}
+
+.board_title .tit_1::after {
+  position: absolute;
+  content: "";
+  border-bottom: 1px solid #222;
+  width: 1200px;
+  top: 50%;
+  right: 110%;
+}
+
+.board_title .tit_1 strong {
+  font-weight: bold;
+}
+
+.board_title .tit_2 {
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 5px;
+}
+
+.vertical_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.vertical_list .item {
+  padding: 20px;
+  width: 25%;
+  list-style: none;
+}
+
+.vertical_list .item a img {
+  width: 270px;
+  height: 380px;
 }

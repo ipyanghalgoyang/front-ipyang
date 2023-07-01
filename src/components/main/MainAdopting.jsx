@@ -15,7 +15,7 @@ export default function MainAdopting() {
   return (
     <div className="main_adopting">
       <div className="adopting_title">
-        <span class="bold">분양중인</span>
+        <span className="bold">분양중인</span>
         <span>반려묘</span>
       </div>
       <div className="adopting_cat">
@@ -70,6 +70,50 @@ export default function MainAdopting() {
             <em>S</em>ERVANTS
           </span>
         </div>
+      </div>
+      <div className="adopting_cat">
+        <Slider {...slickSettings}>
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img1})` }}
+            ></span>
+          </div>
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img2})` }}
+            ></span>
+          </div>
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img3})` }}
+            ></span>
+          </div>
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img4})` }}
+            ></span>
+          </div>
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img4})` }}
+            ></span>
+          </div>
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img4})` }}
+            ></span>
+          </div>
+        </Slider>
+        <div
+          className="adopting_title"
+          style={{ letterSpacing: "30px", padding: "40px 0px" }}
+        ></div>
       </div>
     </div>
   );

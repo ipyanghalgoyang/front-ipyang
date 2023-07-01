@@ -78,7 +78,7 @@ export default function MainBanner() {
       .post("/v1/sign", qs.stringify(data))
       .then(function (res) {
         if (res.data.status === 200) {
-          alert("회원가입 성공.");
+          alert("회원가입이 성공적으로 완료되었습니다.");
           window.location.href = "/";
         } else {
           alert("회원가입 실패.");
