@@ -3,8 +3,11 @@ import img1 from "../../images/main_adopting_1.jpg";
 import img2 from "../../images/main_adopting_2.jpg";
 import img3 from "../../images/main_adopting_3.jpg";
 import img4 from "../../images/main_adopting_4.jpg";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 export default function MainAdopting() {
+  const [adoptList, setAdoptList] = useState([]);
   const slickSettings = {
     dots: false,
     infinite: false,
@@ -12,6 +15,22 @@ export default function MainAdopting() {
     slidesToShow: 4,
     slidesToScroll: 4,
   };
+
+  const adoptContents = () => {
+
+    let adoptResult = axios
+      .get("/v1/adopt",)
+      .then(function (res) {
+        setAdoptList(res.data.resultData);
+      })
+      .catch(function (err) {
+        console.log(err);
+      });
+  };
+
+  useEffect(() => {
+    adoptContents();
+  }, []);
   return (
     <div className="main_adopting">
       <div className="adopting_title">
@@ -20,42 +39,18 @@ export default function MainAdopting() {
       </div>
       <div className="adopting_cat">
         <Slider {...slickSettings}>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img1})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img2})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img3})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img4})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img4})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img4})` }}
-            ></span>
-          </div>
+          {adoptList.map((el, idx) => {
+            return (
+              <div className="img" key={idx}>
+                <span
+                  className="img_src"
+                  style={{ backgroundImage: `url(${img1})` }}
+                >{el.title}</span>
+              </div>
+            );
+          })}
+
+
         </Slider>
         <div
           className="adopting_title"
@@ -71,50 +66,7 @@ export default function MainAdopting() {
           </span>
         </div>
       </div>
-      <div className="adopting_cat">
-        <Slider {...slickSettings}>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img1})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img2})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img3})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img4})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img4})` }}
-            ></span>
-          </div>
-          <div className="img">
-            <span
-              className="img_src"
-              style={{ backgroundImage: `url(${img4})` }}
-            ></span>
-          </div>
-        </Slider>
-        <div
-          className="adopting_title"
-          style={{ letterSpacing: "30px", padding: "40px 0px" }}
-        ></div>
-      </div>
+
     </div>
   );
 }

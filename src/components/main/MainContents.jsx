@@ -1,6 +1,7 @@
 import MainBanner from "./MainBanner";
 import MainAdopting from "./MainAdopting";
 import MainBoard from "./MainBoard";
+import MainMarket from "./MainMarket";
 
 export default function Main() {
   return (
@@ -8,6 +9,7 @@ export default function Main() {
       {/* <MainBanner /> */}
       <MainAdopting />
       <MainBoard />
+      <MainMarket />
     </div>
   );
 }
