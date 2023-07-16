@@ -182,8 +182,7 @@ body {
 }
 
 .vertical_list .item {
-  padding: 20px;
-  width: 25%;
+  padding: 20px 20px 10px 20px;
   list-style: none;
 }
 
@@ -198,8 +197,7 @@ body {
   justify-content: space-between;
 }
 
-
-.latest_wr>div {
+.latest_wr > div {
   width: 49.5%;
   background: #fff;
   border-radius: 0.8rem;
@@ -210,7 +208,7 @@ body {
   margin-bottom: 64px;
 }
 
-.latest_wr>div>.title {
+.latest_wr > div > .title {
   padding: 1rem 2.4rem;
   background: #333;
   color: #fff;
@@ -218,25 +216,43 @@ body {
   position: relative;
 }
 
-.latest_wr>div>.list_wrap .list>a {
+.latest_wr > div > .list_wrap .list > a {
   display: table;
   width: 100%;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(170, 170, 170, 0.2);
 }
 
-.latest_wr>div>.list_wrap .list .date {
+.latest_wr > div > .list_wrap .list .date {
   width: 80px;
   color: #656565;
   text-align: center;
 }
 
-.latest_wr>div>.list_wrap .list .content {
+.latest_wr > div > .list_wrap .list .content {
   padding-left: 32px;
   width: calc(100% - 100px);
 }
 
-.latest_wr>div>.list_wrap .list>a>div {
+.latest_wr > div > .list_wrap .list > a > div {
   float: left;
   display: table-cell;
+}
+
+.product_title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.product_price {
+  font-size: 20px;
+  color: #333;
+}
+
+.product_loc {
+  font-size: 18px;
+  color: #888;
+  text-align: center;
+  margin-bottom: 8px;
 }

@@ -17,9 +17,8 @@ export default function MainAdopting() {
   };
 
   const adoptContents = () => {
-
     let adoptResult = axios
-      .get("/v1/adopt",)
+      .get("/v1/adopt")
       .then(function (res) {
         setAdoptList(res.data.resultData);
       })
@@ -39,7 +38,7 @@ export default function MainAdopting() {
       </div>
       <div className="adopting_cat">
         <Slider {...slickSettings}>
-          {adoptList.map((el, idx) => {
+          {/* {adoptList.map((el, idx) => {
             return (
               <div className="img" key={idx}>
                 <span
@@ -48,9 +47,7 @@ export default function MainAdopting() {
                 >{el.title}</span>
               </div>
             );
-          })}
-
-
+          })} */}
         </Slider>
         <div
           className="adopting_title"
@@ -66,7 +63,6 @@ export default function MainAdopting() {
           </span>
         </div>
       </div>
-
     </div>
   );
 }
