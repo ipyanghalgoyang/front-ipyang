@@ -5,6 +5,7 @@ import MainLayout from "./components/main/MainLayout";
 import MainContents from "./components/main/MainContents";
 import Login from "./components/auth/Login";
 import JoinMain from "./components/auth/JoinMain";
+import Adopt from "./components/adopt/Adopt";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<MainContents />}></Route>
         <Route path="/login" element={<Login />}></Route>
         <Route path="/join" element={<JoinMain />}></Route>
+        <Route path="/adopt" element={<Adopt />}></Route>
       </Routes>
     </div>
   );

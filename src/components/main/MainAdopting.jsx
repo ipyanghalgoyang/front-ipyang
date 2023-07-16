@@ -44,10 +44,36 @@ export default function MainAdopting() {
                 <span
                   className="img_src"
                   style={{ backgroundImage: `url(${img1})` }}
-                >{el.title}</span>
+                >
+                  {el.title}
+                </span>
               </div>
             );
           })} */}
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img1})` }}
+            ></span>
+          </div>
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img2})` }}
+            ></span>
+          </div>
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img3})` }}
+            ></span>
+          </div>
+          <div className="img">
+            <span
+              className="img_src"
+              style={{ backgroundImage: `url(${img4})` }}
+            ></span>
+          </div>
         </Slider>
         <div
           className="adopting_title"

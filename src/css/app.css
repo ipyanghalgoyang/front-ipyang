@@ -87,17 +87,25 @@ body {
 }
 
 .main_banner {
-  height: 690px;
-  background-color: #ddd;
+  height: 500px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 0px 0px 100px 0px;
-  margin-bottom: 100px;
 }
 
 .main_banner h2 {
-  font-size: 28px;
+  font-size: 60px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.main_banner p {
+  margin-top: 12px;
+  font-size: 16px;
+  letter-spacing: 8px;
+  font-weight: 400;
+  color: #fff;
 }
 
 .main_adopting {
@@ -255,4 +263,53 @@ body {
   color: #888;
   text-align: center;
   margin-bottom: 8px;
+}
+
+.sub_con {
+  padding: 95px 0px 100px;
+  position: relative;
+}
+
+.table_board_for {
+  margin-top: 30px;
+  table-layout: fixed;
+  width: 100%;
+  border-top: 1px solid #474b53;
+  border-bottom: 1px solid #ddd;
+  text-align: center;
+  word-break: break-all;
+}
+
+.table_board_for td {
+  padding: 20px 5px;
+  border-top: 1px solid #ddd;
+  text-align: center;
+  vertical-align: top;
+  font-size: 15px;
+}
+
+.table_board_for thead th {
+  color: #444;
+  font-weight: bold;
+  padding: 13px 2px;
+  position: relative;
+}
+
+table td.text_left {
+  text-align: left;
+}
+
+.posi_r {
+  position: relative;
+}
+
+.table_board_for .detail_link {
+  color: #333;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.table_board_for .detail_link:hover {
+  color: #c29683;
+  text-decoration: underline;
 }

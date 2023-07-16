@@ -19,7 +19,7 @@ export default function MainLayout() {
       <div className="gnb">
         <ul>
           <li>
-            <a href="">입양하기</a>
+            <Link to="/adopt">입양하기</Link>
           </li>
           <li>
             <a href="">공유하기</a>
