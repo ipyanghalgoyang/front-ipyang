@@ -2,6 +2,16 @@ body {
   height: 2000px;
 }
 
+.mt_20 {
+  margin-top: 20px;
+}
+
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
 .header {
   height: 144px;
 }
@@ -312,4 +322,97 @@ table td.text_left {
 .table_board_for .detail_link:hover {
   color: #c29683;
   text-decoration: underline;
+}
+
+table .col_w {
+  width: 120px;
+}
+
+.table-view-01 {
+  table-layout: fixed;
+  width: 100%;
+  border-bottom: solid 1px #ddd;
+}
+
+.table-view-01 .text_left {
+  text-align: left;
+}
+
+.table-view-01 tr:first-child td {
+  border-top: solid 1px #000;
+}
+
+.table-view-01 .tit_box {
+  border-bottom: 2px solid #ddd;
+}
+
+.table-view-01 th,
+.table-view-01 td {
+  padding: 16px 10px;
+  vertical-align: top;
+  border-top: solid 1px #ddd;
+}
+
+.table-view-01 .tit_box p.tit {
+  float: left;
+}
+
+.table-view-01 .tit_box p.tbl_detail_span {
+  float: right;
+}
+
+.table-view-01 .tit {
+  font-size: 18px;
+  color: #000;
+}
+
+.table-view-01 .tit_box p.tbl_detail_span .date:before {
+  display: inline-block;
+  overflow: hidden;
+  width: 1px;
+  height: 10px;
+  margin: -1px 7px 0 4px;
+  background: #bbb;
+  content: "";
+  vertical-align: middle;
+}
+
+.table-view-01 .addfile_txt {
+  padding-left: 35px;
+  background: url(../images/icon/file_i.png) no-repeat 0 0;
+}
+
+.table-view-01 td .board-box {
+  min-height: 150px;
+  padding: 10px;
+  text-align: initial;
+  color: #666;
+  line-height: 24px;
+}
+
+.reply_top {
+  font-size: 18px;
+  padding: 18px 10px;
+  border-bottom: 1px solid #000;
+}
+
+.reply_box {
+  padding: 18px 10px;
+  border-bottom: 2px solid #ddd;
+  display: flex;
+}
+
+.reply_writer {
+  flex: 15%;
+  padding-right: 26px;
+}
+
+.reply_content {
+  color: #666;
+  flex: 65%;
+}
+
+.reply_datetime {
+  flex: 20%;
+  text-align: right;
 }

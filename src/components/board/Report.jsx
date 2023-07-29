@@ -1,15 +1,15 @@
-import topImage from "../../images/cat.jpg";
+import topImage from "../../images/review.jpg";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export default function MainAdopting() {
-  const [adoptList, setAdoptList] = useState([]);
+export default function Report() {
+  const [reportList, setReportList] = useState([]);
 
-  const adoptContents = () => {
+  const reportContents = () => {
     let adoptResult = axios
-      .get("/v1/adopt")
+      .get("/v1/board/REPORT")
       .then(function (res) {
-        setAdoptList(res.data.resultData.adoptDtos.content);
+        setReportList(res.data.resultData.boardDtos.content);
       })
       .catch(function (err) {
         console.log(err);
@@ -17,7 +17,7 @@ export default function MainAdopting() {
   };
 
   useEffect(() => {
-    adoptContents();
+    reportContents();
   }, []);
   return (
     <>
@@ -25,7 +25,7 @@ export default function MainAdopting() {
         className="main_banner"
         style={{ backgroundImage: `url(${topImage})`, verticalAlign: "middle" }}
       >
-        <h2>입양게시판</h2>
+        <h2>제보게시판</h2>
         <p>분양 중인 아가들을 소개합니다.</p>
       </div>
       <div className="sub_con">
@@ -41,7 +41,7 @@ export default function MainAdopting() {
               </tr>
             </thead>
             <tbody>
-              {adoptList.map((el, idx) => {
+              {reportList.map((el, idx) => {
                 return (
                   <tr>
                     <td>{el.id}</td>

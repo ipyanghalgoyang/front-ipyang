@@ -65,7 +65,7 @@ export default function MainMarket() {
             <div className="title Score_4">문의하기</div>
             <ul className="list_wrap">
               {boardList.map((el, idx) => {
-                if (el.category === "Info") {
+                if (el.category === "INFO") {
                   return (
                     <li className="list" key={idx}>
                       <a>
@@ -88,7 +88,7 @@ export default function MainMarket() {
             <div className="title Score_4">홍보하기</div>
             <ul className="list_wrap">
               {boardList.map((el, idx) => {
-                if (el.category === "Promo") {
+                if (el.category === "PROMO") {
                   return (
                     <li className="list" key={idx}>
                       <a>
@@ -109,7 +109,7 @@ export default function MainMarket() {
             <div className="title Score_4">제보하기</div>
             <ul className="list_wrap">
               {boardList.map((el, idx) => {
-                if (el.category === "Report") {
+                if (el.category === "REPORT") {
                   return (
                     <li className="list" key={idx}>
                       <a>

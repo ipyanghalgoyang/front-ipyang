@@ -6,6 +6,10 @@ import MainContents from "./components/main/MainContents";
 import Login from "./components/auth/Login";
 import JoinMain from "./components/auth/JoinMain";
 import Adopt from "./components/adopt/Adopt";
+import Info from "./components/board/Info";
+import Promo from "./components/board/Promo";
+import Report from "./components/board/Report";
+import BoardDetail from "./components/board/BoardDetail";
 
 function App() {
   return (
@@ -17,6 +21,10 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/join" element={<JoinMain />}></Route>
         <Route path="/adopt" element={<Adopt />}></Route>
+        <Route path="/info" element={<Info />}></Route>
+        <Route path="/promo" element={<Promo />}></Route>
+        <Route path="/report" element={<Report />}></Route>
+        <Route path="/board/:category/:id" element={<BoardDetail />}></Route>
       </Routes>
     </div>
   );
