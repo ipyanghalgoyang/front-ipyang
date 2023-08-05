@@ -402,6 +402,12 @@ table .col_w {
   display: flex;
 }
 
+.reply_box:last-child {
+  padding: 18px 10px;
+  border-bottom: 1px solid #000;
+  display: flex;
+}
+
 .reply_writer {
   flex: 15%;
   padding-right: 26px;

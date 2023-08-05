@@ -3,17 +3,12 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function BoardDetail() {
-  const [infoList, setInfoList] = useState([]);
+  const [boardContents, setBoardContents] = useState([]);
 
-  const infoContents = () => {
-    let infoResult = axios
-      .get("/v1/board/INFO")
-      .then(function (res) {
-        setInfoList(res.data.resultData.boardDtos.content);
-      })
-      .catch(function (err) {
-        console.log(err);
-      });
+  const infoContents = async () => {
+    let res = await axios.get("/v1/board/read/1");
+
+    setBoardContents([res.data.resultData.resultData.selectBoardDtos]);
   };
 
   useEffect(() => {
@@ -21,6 +16,7 @@ export default function BoardDetail() {
   }, []);
   return (
     <>
+      {console.log(boardContents)};
       <div
         className="main_banner"
         style={{ backgroundImage: `url(${topImage})`, verticalAlign: "middle" }}
@@ -32,16 +28,20 @@ export default function BoardDetail() {
         <div className="wrapper">
           <table className="table-view-01 txt-mt">
             <colgroup>
-              <col class="col_w" />
+              <col className="col_w" />
               <col width="*" />
             </colgroup>
             <tbody>
               <tr>
-                <td colspan="2" className="clearfix tit_box">
-                  <p className="tit">제목</p>
+                <td colSpan="2" className="clearfix tit_box">
+                  <p className="tit">
+                    {boardContents[0] && boardContents[0].title}
+                  </p>
                   <p className="tbl_detail_span mt_05">
-                    <span className="name">canoasin</span>
-                    <span className="date">2023-07-29</span>
+                    <span className="name">
+                      {/*   {boardContents.selectBoardDtos.nickname} */}
+                    </span>
+                    <span className="date"></span>
                   </p>
                 </td>
               </tr>
@@ -52,7 +52,7 @@ export default function BoardDetail() {
                 </td>
               </tr>
               <tr>
-                <td colspan="2">
+                <td colSpan="2">
                   <div className="board-box">
                     미니타입
                     <br />

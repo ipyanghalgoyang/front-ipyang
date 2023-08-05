@@ -26,7 +26,7 @@ function App() {
         <Route path="/promo" element={<Promo />}></Route>
         <Route path="/report" element={<Report />}></Route>
         <Route path="/product" element={<Product />}></Route>
-        <Route path="/board/:category/:id" element={<BoardDetail />}></Route>
+        <Route path="/board/detail/:id" element={<BoardDetail />}></Route>
       </Routes>
     </div>
   );
