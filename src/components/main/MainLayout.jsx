@@ -31,7 +31,7 @@ export default function MainLayout() {
             <Link to="/report">제보하기</Link>
           </li>
           <li>
-            <a href="">마켓</a>
+            <Link to="/product">마켓</Link>
           </li>
         </ul>
       </div>
