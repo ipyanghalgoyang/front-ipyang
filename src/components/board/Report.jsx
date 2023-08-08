@@ -1,6 +1,7 @@
 import topImage from "../../images/review.jpg";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 export default function Report() {
   const [reportList, setReportList] = useState([]);
@@ -46,9 +47,9 @@ export default function Report() {
                   <tr>
                     <td>{el.id}</td>
                     <td class="text_left posi_r">
-                      <a href="" className="detail_link">
+                      <Link to={"/board/detail/" + el.id} className="detail_link">
                         {el.title}
-                      </a>
+                      </Link>
                     </td>
                     <td>{el.nickname}</td>
                     <td>{el.createdAt.substring(2, 10)}</td>
