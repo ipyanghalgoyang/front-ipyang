@@ -1,5 +1,6 @@
 import topImage from "../../images/pet.jpg";
 import { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 export default function Info() {
@@ -46,9 +47,9 @@ export default function Info() {
                   <tr>
                     <td>{el.id}</td>
                     <td class="text_left posi_r">
-                      <a href="" className="detail_link">
+                      <Link to={"/board/detail/" + el.id} className="detail_link">
                         {el.title}
-                      </a>
+                      </Link>
                     </td>
                     <td>{el.nickname}</td>
                     <td>{el.createdAt.substring(2, 10)}</td>

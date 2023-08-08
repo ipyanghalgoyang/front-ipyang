@@ -1,6 +1,7 @@
 import topImage from "../../images/cat.jpg";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import {Link} from "react-router-dom";
 
 export default function Promo() {
   const [promoList, setPromoList] = useState([]);
@@ -47,9 +48,9 @@ export default function Promo() {
                   <tr key={idx}>
                     <td>{++promoNum}</td>
                     <td className="text_left posi_r">
-                      <a href="" className="detail_link">
+                      <Link to={"/board/detail/" + el.id} className="detail_link">
                         {el.title}
-                      </a>
+                      </Link>
                     </td>
                     <td>{el.nickname ? null : "이름 없음"}</td>
                     <td>{el.createdAt.substring(2, 10)}</td>
