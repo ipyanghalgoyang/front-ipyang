@@ -16,7 +16,6 @@ export default function BoardDetail() {
   }, []);
   return (
     <>
-      {console.log(boardContents)};
       <div
         className="main_banner"
         style={{ backgroundImage: `url(${topImage})`, verticalAlign: "middle" }}
@@ -35,7 +34,8 @@ export default function BoardDetail() {
               <tr>
                 <td colSpan="2" className="clearfix tit_box">
                   <p className="tit">
-                    {boardContents[0] && boardContents[0].title}
+                    제목 테스트
+                    {/* {boardContents[0] && boardContents[0].title} */}
                   </p>
                   <p className="tbl_detail_span mt_05">
                     <span className="name">
