@@ -39,7 +39,8 @@ export default function Promo() {
                 <th style={{ width: "*%" }}>제목</th>
                 <th style={{ width: "12%" }}>이름</th>
                 <th style={{ width: "15%" }}>작성일</th>
-                <th style={{ width: "15%" }}>상태</th>
+                <th style={{ width: "15%" }}>조회수</th>
+                <th style={{ width: "15%" }}>추천수</th>
               </tr>
             </thead>
             <tbody>
@@ -54,7 +55,8 @@ export default function Promo() {
                     </td>
                     <td>{el.nickname ? null : "이름 없음"}</td>
                     <td>{el.createdAt.substring(2, 10)}</td>
-                    <td>대기중</td>
+                    <td>{el.viewCnt}</td>
+                    <td>{el.likeCnt}</td>
                   </tr>
                 );
               })}
