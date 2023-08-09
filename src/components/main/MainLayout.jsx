@@ -22,13 +22,13 @@ export default function MainLayout() {
             <Link to="/adopt">입양하기</Link>
           </li>
           <li>
-            <Link to="/info">공유하기</Link>
+            <Link to="/board/INFO">공유하기</Link>
           </li>
           <li>
-            <Link to="/promo">홍보하기</Link>
+            <Link to="/board/PROMO">홍보하기</Link>
           </li>
           <li>
-            <Link to="/report">제보하기</Link>
+            <Link to="/board/REPORT">제보하기</Link>
           </li>
           <li>
             <Link to="/product">마켓</Link>
