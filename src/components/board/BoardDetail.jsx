@@ -64,26 +64,64 @@ export default function BoardDetail() {
                     </td>
                   </tr>
                   <tr style={{ lineHeight: "20px", color: "#666" }}>
-                    <td>첨부파일</td>
+                    <td>첨부파일     </td>
+
+
                     <td className="text_left">
+                      조회수 : {boardContents[0] && boardContents[0].viewCnt}
+                      추천수 : {boardContents[0] && boardContents[0].likeCnt}
+
+
                       <p className="addfile_txt">첨부파일 없음</p>
+
+
                     </td>
                   </tr>
                   <tr>
                     <td colSpan="2">
                       <div className="board-box">
+                        {/* 이미지 리스트 */}
+                        {boardContents[0] && boardContents[0].imgList ? (
+                            boardContents[0].imgList.map((imgUrl, index) => (
+                                <div key={index}>
+                                  <img src={imgUrl} alt={`Image ${index}`} />
+                                </div>
+                            ))
+                        ) : (
+                            <p>이미지 없음</p>
+                        )}
+
+
+                        <br />
                         {boardContents[0] && boardContents[0].content}
 
                         <br />
+
+
                        {/* 1프로 타입*/}
                         <br />
                         {/*무슨차이인지 알수있을까요*/}
                       </div>
                     </td>
+
+
                   </tr>
+         {/*         <tr style={{ lineHeight: "20px", color: "#666" }}>
+                    <td>이미지</td>
+                    <td className="text_left">
+                      {boardContents[0] && boardContents[0].imgList.map((imgUrl, index) => (
+                          <div key={index}>
+                            <img src={imgUrl} alt={`Image ${index}`} />
+                          </div>
+                      ))}
+                    </td>
+                  </tr>*/}
 
             </tbody>
           </table>
+          <p>
+            목록보기버튼    글수정버튼    글삭제하기버튼    추천버튼
+          </p>
           <div className="mt_20">
             <h4 className="reply_top">댓글</h4>
             {commentContents.map((el, idx) => {
@@ -92,6 +130,7 @@ export default function BoardDetail() {
             <div className="reply_box">
               <span className="reply_writer">{el.nickname}</span>
               <span className="reply_content">{el.content}</span>
+             추천 <span className="reply_likeCnt">{el.likeCnt}</span>
               <span className="reply_datetime">{el.createdAt}</span>
             </div>
               );

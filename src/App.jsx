@@ -11,6 +11,7 @@ import Promo from "./components/board/Promo";
 import Report from "./components/board/Report";
 import BoardDetail from "./components/board/BoardDetail";
 import Product from "./components/product/Product";
+import ProductDetail from "./components/product/ProductDetail";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/report" element={<Report />}></Route>
         <Route path="/product" element={<Product />}></Route>
         <Route path="/board/detail/:id" element={<BoardDetail />}></Route>
+        <Route path="/product/detail/:id" element={<ProductDetail />}></Route>
       </Routes>
     </div>
   );
