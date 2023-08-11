@@ -46,6 +46,13 @@ export default function ProductDetail() {
 
                   <tr>
                     <td colSpan="2" className="clearfix tit_box">
+
+
+
+
+
+
+
                       <p className="tit">
 
                         {productContents[0] && productContents[0].name}
@@ -78,7 +85,16 @@ export default function ProductDetail() {
                     <td colSpan="2">
                       <div className="board-box">
 
-
+                        {/* 이미지 리스트 */}
+                        {productContents[0] && productContents[0].imgList ? (
+                            productContents[0].imgList.map((imgUrl, index) => (
+                                <div key={index}>
+                                  <img src={imgUrl} alt={`Image ${index}`} />
+                                </div>
+                            ))
+                        ) : (
+                            <p>이미지 없음</p>
+                        )}
                       가격:  {productContents[0] && productContents[0].price}
                         <br />
                       제품설명:  {productContents[0] && productContents[0].content}
