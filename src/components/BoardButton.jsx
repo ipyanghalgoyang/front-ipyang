@@ -2,11 +2,11 @@ import { useNavigate } from "react-router-dom";
 
 export default function BoardButton(props) {
 
-  var navigate = useNavigate();
+  let func = null;
+  const navigate = useNavigate();
 
-  console.log(props);
   if (props.func === "goback") {
-    var func = props.func;
+    func = props.func;
   }
 
   return (

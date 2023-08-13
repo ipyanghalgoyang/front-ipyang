@@ -47,7 +47,6 @@ export default function BoardDetail() {
 
                     {boardContents[0] && boardContents[0].title}
 
-
                   </p>
                   <p className="tbl_detail_span mt_05">
                     <span className="name">
@@ -73,11 +72,11 @@ export default function BoardDetail() {
                     {boardContents[0] && boardContents[0].imgList ? (
                       boardContents[0].imgList.map((imgUrl, index) => (
                         <div key={index}>
-                          <img src={imgUrl} alt={`Image ${index}`} />
+                          <img src={imgUrl} alt={`Image ${index}`} style={{ width: "100%" }} />
                         </div>
                       ))
                     ) : (
-                      <p>이미지 없음</p>
+                      ""
                     )}
 
                     {boardContents[0] && boardContents[0].content}
