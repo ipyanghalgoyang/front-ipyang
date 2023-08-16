@@ -215,7 +215,7 @@ body {
   justify-content: space-between;
 }
 
-.latest_wr > div {
+.latest_wr>div {
   width: 49.5%;
   background: #fff;
   border-radius: 0.8rem;
@@ -226,7 +226,7 @@ body {
   margin-bottom: 64px;
 }
 
-.latest_wr > div > .title {
+.latest_wr>div>.title {
   padding: 1rem 2.4rem;
   background: #333;
   color: #fff;
@@ -234,25 +234,25 @@ body {
   position: relative;
 }
 
-.latest_wr > div > .list_wrap .list > a {
+.latest_wr>div>.list_wrap .list>a {
   display: table;
   width: 100%;
   padding: 1rem 0;
   border-bottom: 1px solid rgba(170, 170, 170, 0.2);
 }
 
-.latest_wr > div > .list_wrap .list .date {
+.latest_wr>div>.list_wrap .list .date {
   width: 80px;
   color: #656565;
   text-align: center;
 }
 
-.latest_wr > div > .list_wrap .list .content {
+.latest_wr>div>.list_wrap .list .content {
   padding-left: 32px;
   width: calc(100% - 100px);
 }
 
-.latest_wr > div > .list_wrap .list > a > div {
+.latest_wr>div>.list_wrap .list>a>div {
   float: left;
   display: table-cell;
 }
@@ -421,4 +421,49 @@ table .col_w {
 .reply_datetime {
   flex: 20%;
   text-align: right;
+}
+
+.board_btn_box {
+  display: flex;
+  flex-grow: 100%;
+  width: 1200px;
+  justify-content: center;
+}
+
+.board_btn {
+  display: inline-block;
+  padding: 12px 8px;
+  background: #00703c;
+  color: #fff;
+  border: none;
+  margin: 12px 6px;
+  cursor: pointer
+}
+
+.board_create_title {
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 28px;
+  font-weight: 500;
+  color: #000;
+}
+
+.board_title_input {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  height: 38px;
+  padding: 8px;
+}
+
+.board_content_input {
+  width: 100%;
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  height: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  resize: both;
+  font-size: 16px;
+  line-height: 1.5;
 }

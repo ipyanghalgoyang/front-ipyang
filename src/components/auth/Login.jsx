@@ -31,7 +31,6 @@ export default function MainBanner() {
       .catch(function (err) {
         console.log(err);
       });
-    console.log(data);
   };
 
   return (

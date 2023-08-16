@@ -6,11 +6,11 @@ import MainContents from "./components/main/MainContents";
 import Login from "./components/auth/Login";
 import JoinMain from "./components/auth/JoinMain";
 import Adopt from "./components/adopt/Adopt";
-import Info from "./components/board/Info";
-import Promo from "./components/board/Promo";
-import Report from "./components/board/Report";
+import BoardIndex from "./components/board/BoardIndex";
 import BoardDetail from "./components/board/BoardDetail";
+import BoardWrite from "./components/board/BoardWrite";
 import Product from "./components/product/Product";
+import ProductDetail from "./components/product/ProductDetail";
 
 function App() {
   return (
@@ -22,11 +22,11 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/join" element={<JoinMain />}></Route>
         <Route path="/adopt" element={<Adopt />}></Route>
-        <Route path="/info" element={<Info />}></Route>
-        <Route path="/promo" element={<Promo />}></Route>
-        <Route path="/report" element={<Report />}></Route>
         <Route path="/product" element={<Product />}></Route>
+        <Route path="/board/:category" element={<BoardIndex />}></Route>
         <Route path="/board/detail/:id" element={<BoardDetail />}></Route>
+        <Route path="/board/:category/write" element={<BoardWrite />}></Route>
+        <Route path="/product/detail/:id" element={<ProductDetail />}></Route>
       </Routes>
     </div>
   );
