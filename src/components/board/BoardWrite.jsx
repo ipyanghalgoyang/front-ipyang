@@ -20,19 +20,24 @@ export default function BoardDetail() {
   const [file, setFile] = useState([]);
 
   const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
+    setFile(file.concat(e.target.files[0]));
   };
 
   const WriteBoard = async (e) => {
     e.preventDefault();
-
     const formData = new FormData();
     formData.append('title', title);
     formData.append('content', content);
-    formData.append('boardFile', file);
+    file.forEach(picture =>{
+      formData.append('boardFile', picture);
+    });
 
     let sendData = await axios
-      .post(`/v1/board/${category}/write`, formData)
+      .post(`/v1/board/${category}/write`, formData,{
+        headers: {
+          'Content-Type': 'multipart/form-data'
+        }
+      })
       .then(function (res) {
         if (res.status === 200) {
           navigate(`/board/${category}`);
@@ -82,7 +87,7 @@ export default function BoardDetail() {
                 </tr>
                 <tr>
                   <td colSpan="2" className="tit_box">
-                    <input type="file" className="board_file_input" placeholder="글 제목" onChange={handleFileChange} />
+                    <input type="file" className="board_file_input" placeholder="글 제목" multiple onChange={handleFileChange} />
                   </td>
                 </tr>
               </tbody>
