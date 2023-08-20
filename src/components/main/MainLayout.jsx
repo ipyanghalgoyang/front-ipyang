@@ -3,40 +3,38 @@ import axios from "axios";
 import qs from "qs";
 
 export default function MainLayout() {
-  let  isLogged = sessionStorage.getItem("user_id");
-  const logoutSubmit = async (e) =>{
+  let isLogged = sessionStorage.getItem("user_id");
+  const logoutSubmit = async (e) => {
     e.preventDefault();
     let sendData = await axios
-        .post("/v1/logout")
-        .then(function (res) {
-          if (res.data.status === 200) {
-            sessionStorage.removeItem("user_id");
-            window.location.href = "/";
-          } else {
-            alert("서버에 문제가있다. ㅇㅋ?");
-          }
-        })
+      .post("/v1/logout")
+      .then(function (res) {
+        if (res.data.status === 200) {
+          sessionStorage.removeItem("user_id");
+          window.location.href = "/";
+        } else {
+
+        }
+      })
   }
   return (
     <div className="header">
       <div className="header_wrap">
         <div className="logo"></div>
         {isLogged ?
-         (
-             <div className="util_wrap">
-               <ul>
-                 <li>
-                   <button className="join-submit-btn" onClick={logoutSubmit}>
-                     LOGOUT
-                   </button>
-                   {/*<Link to="/login"></Link>*/}
-                 </li>
-                 <li>
-                   <Link to="/mypage">MyPage</Link>
-                 </li>
-               </ul>
-             </div>
-         ) : (
+          (
+            <div className="util_wrap">
+              <ul>
+                <li>
+
+                  <Link to="/" onClick={logoutSubmit}>LOGOUT</Link>
+                </li>
+                <li>
+                  <Link to="/mypage">MyPage</Link>
+                </li>
+              </ul>
+            </div>
+          ) : (
             <div className="util_wrap">
               <ul>
                 <li>
@@ -47,8 +45,8 @@ export default function MainLayout() {
                 </li>
               </ul>
             </div>
-        )
-      }
+          )
+        }
       </div>
 
       <div className="gnb">

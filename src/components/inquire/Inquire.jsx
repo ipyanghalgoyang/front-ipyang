@@ -8,7 +8,6 @@ import BoardButton from "../BoardButton";
 
 export default function Inquire() {
     const [inquireList, setInquireList] = useState([]);
-
     const { category } = useParams();
     const categoryName = {
         NOTICE: "공지사항",
@@ -27,28 +26,7 @@ export default function Inquire() {
             });
     };
 
-    const showPasswordPrompt = (id) => {
-        const inputPasswd = window.prompt("비밀번호를 입력하세요:");
-        if (inputPasswd) {
-            // axios를 사용하여 비밀번호 전송
-            axios.get(`/v1/inquire/${id}`, {
-                params: {
-                    inputPasswd: inputPasswd
-                }
-            })
-                .then(function (res) {
-                    // 서버에서 받은 응답 처리
-                    if (res.data.statusCode === 200) {
-                        window.location.href = `/inquire/detail/${id}`;
-                    } else {
-                        alert("비밀번호가 일치하지 않습니다");
-                    }
-                })
-                .catch(function (err) {
-                    console.log(err);
-                });
-        }
-    };
+
 
     useEffect(() => {
         inquireContents();
@@ -82,26 +60,26 @@ export default function Inquire() {
                 <div className="wrapper">
                     <table className="table_board_for">
                         <thead>
-                        <tr>
-                            <th style={{ width: "10%" }}>번호</th>
-                            <th style={{ width: "*%" }}>제목</th>
-                            <th style={{ width: "30%" }}>작성일</th>
-                        </tr>
+                            <tr>
+                                <th style={{ width: "10%" }}>번호</th>
+                                <th style={{ width: "*%" }}>제목</th>
+                                <th style={{ width: "30%" }}>작성일</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        {inquireList.map((el, idx) => {
-                            return (
-                                <tr key={idx}>
-                                    <td>{el.id}</td>
-                                    <td className="text_left posi_r">
-                                        <Link to={"/inquire/detail/" + el.id} className="detail_link" onClick={() => showPasswordPrompt(el.id)}>
-                                            {el.title}
-                                        </Link>
-                                    </td>
-                                    <td>{el.createdAt.substring(2, 10)}</td>
-                                </tr>
-                            );
-                        })}
+                            {inquireList.map((el, idx) => {
+                                return (
+                                    <tr key={idx}>
+                                        <td>{el.id}</td>
+                                        <td className="text_left posi_r">
+                                            <Link to={"/inquire/detail/" + el.id} className="detail_link">
+                                                {el.title}
+                                            </Link>
+                                        </td>
+                                        <td>{el.createdAt.substring(2, 10)}</td>
+                                    </tr>
+                                );
+                            })}
                         </tbody>
                     </table>
                     <div style={{ textAlign: "right" }}>
