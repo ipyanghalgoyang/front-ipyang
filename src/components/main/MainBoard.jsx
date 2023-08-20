@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import img2 from "../../images/main_adopting_3.jpg";
+import { Link } from "react-router-dom";
 
 export default function MainMarket() {
   const [adoptList, setAdoptList] = useState([]);
@@ -157,6 +158,9 @@ export default function MainMarket() {
             })}
           </div>
         </div>
+      </div>
+      <div className="footer">
+        <Link to="/customer">고객센터</Link>
       </div>
     </>
   );
