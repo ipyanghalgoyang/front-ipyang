@@ -36,11 +36,7 @@ export default function BoardDetail() {
     });
 
     let sendData = await axios
-      .post(`/v1/board/${category}/write`, formData,{
-        headers: {
-          'Content-Type': 'multipart/form-data'
-        }
-      })
+      .post(`/v1/board/write`, formData)
       .then(function (res) {
         if (res.status === 200) {
           navigate(`/board/${category}`);
