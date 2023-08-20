@@ -9,6 +9,7 @@ import Adopt from "./components/adopt/Adopt";
 import BoardIndex from "./components/board/BoardIndex";
 import BoardDetail from "./components/board/BoardDetail";
 import BoardWrite from "./components/board/BoardWrite";
+import ProductWrite from "./components/product/ProductWrite";
 import Product from "./components/product/Product";
 import ProductDetail from "./components/product/ProductDetail";
 
@@ -25,7 +26,8 @@ function App() {
         <Route path="/product" element={<Product />}></Route>
         <Route path="/board/:category" element={<BoardIndex />}></Route>
         <Route path="/board/detail/:id" element={<BoardDetail />}></Route>
-        <Route path="/board/:category/write" element={<BoardWrite />}></Route>
+        <Route path="/board/write" element={<BoardWrite />}></Route>
+        <Route path="/product/write" element={<ProductWrite />}></Route>
         <Route path="/product/detail/:id" element={<ProductDetail />}></Route>
       </Routes>
     </div>
