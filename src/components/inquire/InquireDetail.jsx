@@ -103,6 +103,15 @@ export default function InquireDetail() {
 
 
                             </tr>
+                            <tr>
+                                <td colSpan="2" className="clearfix tit_box">
+                                    <p className="tit">
+
+                                        {inquireContents[0] && inquireContents[0].replyContent}
+
+                                    </p>
+                                </td>
+                            </tr>
                             {/*         <tr style={{ lineHeight: "20px", color: "#666" }}>
                     <td>이미지</td>
                     <td className="text_left">

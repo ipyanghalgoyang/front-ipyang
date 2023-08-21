@@ -16,6 +16,9 @@ import RedirectCustomerCenter from "./components/inquire/RedirectCustomerCenter"
 import Inquire from "./components/inquire/Inquire";
 import NoticeDetail from "./components/inquire/NoticeDetail";
 import InquireDetail from "./components/inquire/InquireDetail";
+import NoticeWrite from "./components/inquire/NoticeWrite";
+import InquireWrite from "./components/inquire/InquireWrite";
+
 
 function App() {
   return (
@@ -37,6 +40,8 @@ function App() {
         <Route path="/customer" element={<RedirectCustomerCenter />} />
         <Route path="/notice/detail/:id" element={<NoticeDetail />}></Route>
         <Route path="/inquire/detail/:id" element={<InquireDetail />}></Route>
+        <Route path="/notice/:category/write" element={<NoticeWrite />}></Route>
+        <Route path="/inquire/write" element={<InquireWrite />}></Route>
       </Routes>
     </div>
   );

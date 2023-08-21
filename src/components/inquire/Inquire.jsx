@@ -63,7 +63,8 @@ export default function Inquire() {
                             <tr>
                                 <th style={{ width: "10%" }}>번호</th>
                                 <th style={{ width: "*%" }}>제목</th>
-                                <th style={{ width: "30%" }}>작성일</th>
+                                <th style={{ width: "10%" }}></th>
+                                <th style={{ width: "20%" }}>작성일</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -76,6 +77,7 @@ export default function Inquire() {
                                                 {el.title}
                                             </Link>
                                         </td>
+                                        <td>{el.status === 'N' ? '답변 중' : '답변 완료'}</td>
                                         <td>{el.createdAt.substring(2, 10)}</td>
                                     </tr>
                                 );
@@ -83,7 +85,7 @@ export default function Inquire() {
                         </tbody>
                     </table>
                     <div style={{ textAlign: "right" }}>
-                        <Link to={`/notice/${category}/write`}><BoardButton name="작성하기" /></Link>
+                        <Link to={`/inquire/write`}><BoardButton name="작성하기" /></Link>
                     </div>
                 </div>
             </div>
