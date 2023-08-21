@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import img2 from "../../images/main_adopting_3.jpg";
 import {Link} from "react-router-dom";
+import BoardButton from "../BoardButton";
 
 export default function Product() {
   const [productList, setProductList] = useState([]);
@@ -51,7 +52,7 @@ export default function Product() {
                       </h4>
                     <li className="item">
                       <Link to={"/product/detail/" + el.id} className="detail_link">
-                        <img src={img2} alt="" />
+                        <img src={el.imageFiles[0]} alt="" />
                       </Link>
                     </li>
                     <h4 className="product_loc">{el.loc}</h4>
@@ -68,6 +69,9 @@ export default function Product() {
               </div>
             </tbody>
           </table>
+          <div style={{ textAlign: "right" }}>
+            <Link to={`/product/write`}><BoardButton name="작성하기" /></Link>
+          </div>
         </div>
       </div>
     </>
